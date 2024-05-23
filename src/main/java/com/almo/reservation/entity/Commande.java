@@ -8,6 +8,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -16,6 +18,7 @@ import java.time.LocalDateTime;
 public class Commande {
     @Id
     @GeneratedValue
+    private UUID commandeId;
     private LocalDateTime DateCommande;
     private String listeCommande;
     private int prixTotalCommande;
